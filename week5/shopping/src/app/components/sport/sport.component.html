@@ -1,0 +1,101 @@
+<body>
+  <div class="container">
+    <br>
+
+      <form>
+        <div class="form-group">
+          <input type="text" id="typeSmth" placeholder="Что вы искали?" class="form-control"> <br>
+          <img src="https://images.all-free-download.com/images/graphiclarge/mouse_click_on_the_icon_vector_280955.jpg" id="logo" class="rounded-circle" alt="Logo">
+        </div>
+      </form>
+
+      <div class="card" id="card1" style="width:300px">
+        <img class="card-img-top" src="https://a.lmcdn.ru/product/S/I/SI029EWBPFZ7_6721181_1_v1.jpg" id = "image1" alt="Card image">
+          <div class="card-body">
+            <h5 class="card-title"><strong>{{price}} тг. </strong></h5>
+            <p class="card-title">{{model}} | {{name}}</p>
+            <p class="card-title">{{sizes}}</p>
+            <button id="btn1"  class="btn btn-primary" (click)="showEdit()">Подробнее</button> 
+          </div>
+      </div>
+      <br>
+
+      <div class="card" id = "card2" style="width:300px">
+          <img class="card-img-top" src="https://a.lmcdn.ru/product/A/D/AD002AWEGRL1_8022348_1_v1.jpg" id = "image1" alt="Card image">
+            <div class="card-body">
+              <h5 class="card-title"><strong>19 000 тг. </strong></h5>
+              <p class="card-title"> adidas | Кроссовки ARGECY</p>
+              <p class="card-title">35 36 37 38 </p>
+              <button id="btn1"  class="btn btn-primary" (click)="showEdit2()">Подробнее</button> 
+            </div>
+        </div>
+        <br>
+
+        <div class="card" id = "card3" style="width:300px">
+            <img class="card-img-top" src="https://a.lmcdn.ru/product/E/A/EA002EWDQYZ9_8089456_1_v1.jpg" id = "image1" alt="Card image">
+              <div class="card-body">
+                <h5 class="card-title"><strong>23 000 тг. </strong></h5>
+                <p class="card-title"> EA7 | Футболки</p>
+                <p class="card-title">XS S M L </p>
+                <button id="btn1"  class="btn btn-primary" (click)="showEdit3()">Подробнее</button> 
+              </div>
+          </div>
+          <br>
+
+    
+      <div class="card11" *ngIf=isEdit>
+          <div class="card-header"><strong>{{model}}</strong></div>
+          <div class="card-body">{{name}}</div>
+          <div class="dropdown dropright">
+              <button type="button" id="razmer1" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Выберите размер
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">42</a>
+                <a class="dropdown-item" href="#">44</a>
+                <a class="dropdown-item" href="#">46</a>
+              </div>
+            </div>
+          <div class="card-footer"><mark>О товаре:</mark></div>
+          <p>Спортивный костюм Nike состоит из олимпийки и брюк. Изделия выполнены из приятного на ощупь, технологичного трикотажа. Технология DRY PRO удаляет влагу с поверхности кожи и позволяет чувствовать себя комфортно во время тренировок. Детали олимпийки: комбинированный дизайн, застежка на молнии, два кармана. Детали брюк: светоотражающий логотип бренда, контрастные лампасы, эластичный пояс.</p> 
+          <button id="nikebtn" class="btn btn-info">Добавить в корзину</button> 
+      </div>
+      
+      <div class="card22" *ngIf=isEdit2>
+          <div class="card-header"><strong>adidas</strong></div>
+          <div class="card-body">Кроссовки ARGECY</div>
+          <div class="dropdown dropright">
+              <button type="button" id="razmer1" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Выберите размер
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">36</a>
+                <a class="dropdown-item" href="#">37</a>
+                <a class="dropdown-item" href="#">38</a>
+              </div>
+            </div>
+          <div class="card-footer"><mark>О товаре:</mark></div>
+          <p>Кроссовки выполнены из сетчатого текстиля. Детали: шнуровка, комфортная и функциональная стелька OrthoLite® Float с антимикробным покрытием, резиновая подошва.</p> 
+          <button id="nikebtn" class="btn btn-info">Добавить в корзину</button> 
+      </div>
+
+      <div class="card33" *ngIf=isEdit3>
+          <div class="card-header"><strong>EA7</strong></div>
+          <div class="card-body">Футболки</div>
+          <div class="dropdown dropright">
+              <button type="button" id="razmer1" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Выберите размер
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">XS</a>
+                <a class="dropdown-item" href="#">S</a>
+                <a class="dropdown-item" href="#">M</a>
+              </div>
+            </div>
+          <div class="card-footer"><mark>О товаре:</mark></div>
+          <p>Футболка от премиум-бренда выполнена из хлопкового трикотажа. Особенности: круглый вырез, принт в виде названия бренда.</p> 
+          <button id="nikebtn" class="btn btn-info">Добавить в корзину</button> 
+      </div>
+
+  </div>
+</body>

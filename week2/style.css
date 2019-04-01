@@ -1,0 +1,83 @@
+.mainer{
+    background-color: black;
+    height: 63px;
+    padding-top:1px;
+    margin:20px;
+}
+
+#todo{
+    color: #999;
+    font-size:18px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    margin-left:70px;
+    padding-top: 8px;
+}
+/* .centerer{
+    background-color: azure;
+} */
+
+#title{
+
+    font-size:30px;
+    margin-left:350px;
+    margin-top:40px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight:normal;
+}
+
+#tasks{
+    margin-left: 415px;
+
+}
+
+#fortasks{
+    
+    width:600px;
+    height:28px;
+    border-radius: 3px;
+}
+
+#add{
+    background-color:rgb(17, 122, 192);;
+    font-weight: normal;
+    border-radius: 1px;
+    border-color:rgb(17,122,192);
+    color:white;
+    height: 32px;
+    margin-left:25px;
+    width: 50px;
+    
+}
+ ul{
+     font-size:17px;
+     cursor:pointer;
+     margin-left:290px;
+     margin-right:335px;
+     margin-top:40px;
+     list-style-type:none;
+     
+ }
+ ul li{
+     border: 1px solid rgb(205, 196, 197);
+     position: relative;
+     padding:20px 8px 20px 25px;
+     border-radius: 5px;
+ }
+ ul li input{
+     text-align: left;
+   padding-left:50px;
+ }
+ .image{
+     width:90px;
+     float:right;
+     height: 50px;
+ }
+ ul li span{
+    margin-left:0px;
+    position: relative;
+    left: 13%;
+  }
+ input[type=checkbox]{
+        margin-right: -15px;
+ }
