@@ -25,10 +25,11 @@ class TaskListSerializer2(serializers.ModelSerializer):
         # fields = '__all__'
 
 class TaskSerializer(serializers.Serializer):
+    id = serializers.IntegerField()
     name = serializers.CharField()
-    created_at = serializers.IntegerField()
-    due_on = serializers.IntegerField()
-    status = serializers.CharField
-    taskList = TaskListSerializer()
+    created_at = serializers.DateTimeField()
+    due_on = serializers.DateTimeField()
+    status = serializers.CharField()
+    task_list = TaskListSerializer()
 
 

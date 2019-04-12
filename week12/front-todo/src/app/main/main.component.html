@@ -1,0 +1,26 @@
+<div class = "main">ToDo List</div>
+<br><br>
+<div class="createTask">
+  <input type="text" [(ngModel)]="name" class="inputText" placeholder="New Task" />
+  <button (click)="createTaskList()" class = "createBtn">Create TaskList</button>
+</div>
+<br>
+<div>
+  <div *ngFor="let c of taskLists">
+    <span (click)="getTaskOfList(c)">
+      <input type="text" [(ngModel)]="c.name" class="inputTask" />
+    </span>
+    <span style="color: red" (click)="deleteTaskList(c)" class="delete"> Delete</span>
+    <span style="color: green" (click)="updateTaskList(c)" class="delete"> Update</span>
+  </div>
+</div>
+<!-- <div>
+    <div *ngFor="let c of taskLists" (click)="getTaskOfList(c)" class="tasks">{{c.id}}.{{c.name}}</div>
+</div>  -->
+<br><br>
+
+<ng-container>
+  <div *ngFor="let t of tasks" class="subtasks">
+    <li><p style="color: blue">{{t.name}}</p><p>Status: {{t.status}}</p><p>Created at: {{t.created_at}}</p><p>Due on: {{t.due_on}}</p></li></div>
+    
+</ng-container>

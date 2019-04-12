@@ -3,6 +3,8 @@ from .models import TaskList
 from django.views.decorators.csrf import csrf_exempt
 import json
 from api.serializers import TaskListSerializer, TaskSerializer, TaskListSerializer2
+from django.shortcuts import render
+
 
 @csrf_exempt
 def task_lists(request):
@@ -11,7 +13,7 @@ def task_lists(request):
         serializer = TaskListSerializer(lists, many=True)
         return JsonResponse(serializer.data, safe=False, status=200)
     elif request.method == 'POST':
-        data = json.loads(request.body)
+        data = json.loads(request.body.decode('utf-8'))
         serializer = TaskListSerializer2(data=data)
         if serializer.is_valid():
             serializer.save()  # create function in serializer class
@@ -29,7 +31,7 @@ def get_task_list(request, pk):
        serializer = TaskListSerializer(taski)
        return JsonResponse(serializer.data, status=200)
    elif request.method == 'PUT':
-       data = json.loads(request.body)
+       data = json.loads(request.body.decode('utf-8'))
        serializer = TaskListSerializer(instance=taski, data=data)
        if serializer.is_valid():
            serializer.save()  # update function in serializer class
@@ -48,7 +50,6 @@ def list_tasks(request,pk):
     except TaskList.DoesNotExist as e:
         return JsonResponse({'error': str(e)})
     tasks = list.task_set.all()
-    serializer = TaskSerializer(tasks, many = True)
-    # json_tasks = [t.to_json() for t in tasks]
+    serializer = TaskSerializer(tasks, many=True)
     return JsonResponse(serializer.data,safe=False)
 
