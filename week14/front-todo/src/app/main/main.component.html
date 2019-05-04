@@ -1,0 +1,46 @@
+<div class = "main">ToDo List</div>
+<br><br>
+
+<ng-container *ngIf="!logged">
+    <div class="inout" >
+      <div><input type="text" [(ngModel)]="login" class="user" placeholder="username"/></div>
+      <div><input type="text" [(ngModel)]="password" class="user" placeholder="password"/></div>
+      <div><button class="btn" (click)="auth()">Log in</button></div>
+    </div>
+  </ng-container>
+
+
+<ng-container *ngIf="logged">
+    <div class="createTask">
+        <input type="text" [(ngModel)]="name" class="inputText" placeholder="New Task" />
+        <button (click)="createTaskList()" class = "createBtn">Create TaskList</button>
+      </div>
+      <br>
+      <div>
+        <div *ngFor="let c of taskLists">
+          <span (click)="getTaskOfList(c)">
+            <input type="text" [(ngModel)]="c.name" class="inputTask" />
+          </span>
+          <span style="color: red" (click)="deleteTaskList(c)" class="delete"> Delete</span>
+          <span style="color: green" (click)="updateTaskList(c)" class="delete"> Update</span>
+        </div>
+      </div>
+      <div style=" display: inline;  white-space: nowrap;">
+        ADD NEW TASK:
+        <input type="text" [(ngModel)]="task_name" placeholder="Name"/>
+        <img id="yes2" (click)="createTask()"  width="40" style="position: relative; top:10px;">
+      </div>
+      
+      <br><br>
+      
+      <div>
+        <div *ngFor="let t of tasks" class="subtasks">
+          <li><p style="color: blue">{{t.name}}</p><p>Status: {{t.status}}</p><p>Created at: {{t.created_at}}</p><p>Due on: {{t.due_on}}</p></li></div>   
+        </div>
+
+        <div>
+            <button class="logout" (click)="logout()">Log out</button>
+        </div>
+        
+</ng-container>
+

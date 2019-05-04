@@ -1,0 +1,66 @@
+.main{
+    margin-top:30px;
+    font-size: 30px;
+    margin-left: 100px;
+    margin-right:1500px;
+    padding:20px;
+    font-weight: 100px;
+    box-shadow: 0 0 50px rgba(191, 240, 14, 0.74);
+    background-color: rgb(33, 153, 137);
+}
+.tasks{
+    margin-left:100px;
+    font-size:20px;
+    padding:10px;
+    color: rgb(38, 184, 63);
+}
+.subtasks{
+    margin-left: 100px;
+    color:yellow;
+    font-size: 14px;
+}
+/* .sub{
+    color:yellow;
+    font-size:20px;
+} */
+
+.createTask{
+    margin-left:85px;
+}
+.createBtn{
+    height: 35px;
+    border-radius: 15px;
+    background-color: rgb(19, 165, 19);
+    box-shadow: 0 0 40px rgba(191, 240, 14, 0.74);
+    margin-left: 5px;
+}
+.inputText{
+    height: 30px;
+    border-radius: 7px;
+}
+.inputTask{
+    margin-left:88px;
+    font-size:17px;   
+    color: rgb(38, 184, 63)
+
+}
+.delete{
+    padding:5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.user{
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 100px;
+}
+.btn{
+    margin-left:100px;
+    margin-top:10px;
+    background-color: chartreuse;
+}
+.logout{
+    height: 30px;
+    margin-left:120px;
+    background-color: indianred;
+
+}
